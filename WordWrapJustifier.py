@@ -50,7 +50,7 @@ def justify_text(input_text, page_width):
     return justified_lines
 
 
-# Taking input
+# Taking inputs
 paragraph = input()
 page_width = int(input())
 
