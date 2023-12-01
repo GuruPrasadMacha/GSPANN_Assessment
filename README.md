@@ -28,22 +28,31 @@ Array [5] = "are adding more text"
 Array [6] = "to   see   that   it"
 Array [7] = "actually      works."
 
-## Unit Test Cases
-1. **Test Case 1:**
-   - Input: "This is a sample text.", Page Width: 10
-   - Expected Output:
-     ```
-     Array [1] = "This is a"
-     Array [2] = "sample"
-     Array [3] = "text.    "
-     ```
+##**Input Validations**
+1. **Positive Integer Page Width**: Verifies that the page_width provided to the function is a positive integer.
+2. **Non-Empty String Input Text**: Checks if the input_text is a non-empty string, ensuring there's content to justify.
+3. **Word Length Check:** Validates whether any word in the input text exceeds the specified page width.
+I have added the below input validations for now, if we required we can add few more validations for example as below.
+**Additional Input Validations (If Required):**
+1. **Maximum Page Width:** Validation can be added to ensure the page_width doesn't exceed a maximum permissible value.
+2. **Non-ASCII Characters in Input:** Ensures that the input_text doesn’t contain non-ASCII characters if needed.
+These validations secure the function against incorrect inputs, ensuring its robustness. 
 
-2. **Test Case 2:**
-   - Input: "A short line.", Page Width: 15
-   - Expected Output:
-     ```
-     Array [1] = "A short line.  "
-     ```
-Feel free to explore the code in this repository and run it with different inputs!
+## Unit Test Cases
+**Test Justification Module (test_justify_text.py)**
+This Python test file (test_justify_text.py) contains a suite of test cases to validate the functionality and input validations for the justify_text function.
+Execute the test cases by running the test_justify_text.py file using the command: **python3 test_justify_text.py**
+
+**Test Cases:** **(Test Count: 8)**
+1. **Test for Small Page Width**: Validates the proper justification of text when the page width is smaller than the input text length.
+2. **Test for Large Page Width**: Checks if the text gets properly justified when the page width is significantly larger than the input text length.
+3. **Test for Single Word**: Ensures correct justification for a single word when provided within the specified page width.
+4. **Test for Multiple Lines**: Verifies the handling of multiple lines within the specified page width, ensuring accurate justification.
+5. **Test for Empty Input Text**: Validates the function raises a ValueError if an empty string is provided as input.
+6. **Test for Negative Page Width**: Checks if a negative integer value for the page width raises a ValueError.
+7. **Test for Non-Integer Page Width**: Verifies if a non-integer value for the page width raises a ValueError.
+8. **Test for Non-String Input Text**: Validates that passing a non-string input text raises a ValueError.
+
+These test cases cover both the functional aspects and input validations to ensure the justify_text function behaves correctly under various scenarios.
 
 Thank You!!!.
