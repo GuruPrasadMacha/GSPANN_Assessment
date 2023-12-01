@@ -1,4 +1,12 @@
 def justify_text(input_text, page_width):
+    # Validate if page_width is a positive integer
+    if not isinstance(page_width, int) or page_width <= 0:
+        raise ValueError("Page width must be a positive integer")
+
+    # Validate if input_text is a non-empty string
+    if not isinstance(input_text, str) or not input_text.strip():
+        raise ValueError("Input text must be a non-empty string")
+
     # Split the input text into words
     words = input_text.split()
     
@@ -50,9 +58,15 @@ def justify_text(input_text, page_width):
     return justified_lines
 
 
-# Taking inputs
-paragraph = input()
-page_width = int(input())
+# Taking inputs with validations
+while True:
+    try:
+        paragraph = input("Enter paragraph: ")
+        page_width = int(input("Enter page width: "))
+        result = justify_text(paragraph, page_width)
+        break
+    except ValueError as e:
+        print(f"Error: {e}. Please enter valid inputs.")
 
 # Call the function
 result = justify_text(paragraph, page_width)
