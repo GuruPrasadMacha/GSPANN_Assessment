@@ -6,6 +6,11 @@ def justify_text(input_text, page_width):
     # Validate if input_text is a non-empty string
     if not isinstance(input_text, str) or not input_text.strip():
         raise ValueError("Input text must be a non-empty string")
+    
+    # Check if any word's length exceeds the page_width
+    max_word_length = max(len(word) for word in input_text.split())
+    if max_word_length > page_width:
+        raise ValueError("Some words in the input text exceed the page width")
 
     # Split the input text into words
     words = input_text.split()
