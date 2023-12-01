@@ -18,6 +18,7 @@ Input:This is a sample text but a complicated problem to be solved, so we are ad
 Page Width: `20`
 
 Output:
+
 Array [1] = "This   is  a  sample"
 Array [2] = "text      but      a"
 Array [3] = "complicated  problem"
@@ -31,6 +32,7 @@ Array [7] = "actually      works."
 2. **Non-Empty String Input Text**: Checks if the input_text is a non-empty string, ensuring there's content to justify.
 3. **Word Length Check:** Validates whether any word in the input text exceeds the specified page width.
 I have added the below input validations for now, if we required we can add few more validations for example as below.
+
 **Additional Input Validations (If Required):**
 1. **Maximum Page Width:** Validation can be added to ensure the page_width doesn't exceed a maximum permissible value.
 2. **Non-ASCII Characters in Input:** Ensures that the input_text doesn’t contain non-ASCII characters if needed.
