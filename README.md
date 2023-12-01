@@ -4,8 +4,6 @@ Will be deleted after the evaluation
 # Word Wrap Text Justifier
 The `WordWrapJustifier.py` Python script justifies text input based on a specified page width without breaking words.
 
-Alternatively, you can also execute the “WordWrapJustifier_v1.py” Python script, which will also serve the same purpose but code is optimized using build in a module. 
-
 ## Steps to Execute the Program
 1. **Clone the repository:**
  git clone https://github.com/GuruPrasadMacha/GSPANN_Assessment.git
